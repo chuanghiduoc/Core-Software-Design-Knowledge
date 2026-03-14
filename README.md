@@ -1,92 +1,92 @@
 # Core Software Design Knowledge
 
-> Bo kien thuc thiet ke phan mem cot loi — tu code-level den system-level den people-level.
-> Viet bang tieng Viet, chuyen sau TypeScript, goc nhin cua ky su hang dau the gioi.
+> Bộ kiến thức thiết kế phần mềm cốt lõi — từ code-level đến system-level đến people-level.
+> Viết bằng tiếng Việt, chuyên sâu TypeScript, góc nhìn của kỹ sư hàng đầu thế giới.
 
 ---
 
-## Tong quan
+## Tổng quan
 
-**67 files | 40,574+ dong** kien thuc thiet ke phan mem, bao gom:
+**70 files | 40,700+ dòng** kiến thức thiết kế phần mềm, bao gồm:
 
-- Moi concept deu co **Bad vs Good** code examples
-- Tat ca code examples deu **TypeScript production-grade**
-- Moi topic deu co **khi nao dung / khi nao KHONG dung**
-- Tu **ly thuyet** den **real-world case studies**
+- Mọi concept đều có **❌ Bad vs ✅ Good** code examples
+- Tất cả code examples đều **TypeScript production-grade**
+- Mọi topic đều có **khi nào dùng / khi nào KHÔNG dùng**
+- Từ **lý thuyết** đến **real-world case studies**
 
-## Muc luc
+## Mục lục
 
-### Foundation (Nen tang)
+### Nền tảng
 
-| # | Section | Mo ta | Files |
+| # | Section | Mô tả | Files |
 |---|---------|-------|-------|
 | 1 | [Design Principles](./1.%20Design%20Principles/) | SOLID, DRY/KISS/YAGNI, Composition over Inheritance, SoC, Law of Demeter, Fail Fast, Immutability | 7 |
-| 2 | [Design Patterns](./2.%20Design%20Patterns/) | 23 GoF Patterns voi TypeScript hien dai — Creational, Structural, Behavioral | 6 |
+| 2 | [Design Patterns](./2.%20Design%20Patterns/) | 23 GoF Patterns với TypeScript hiện đại — Creational, Structural, Behavioral | 6 |
 
-### Architecture (Kien truc)
+### Kiến trúc
 
-| # | Section | Mo ta | Files |
+| # | Section | Mô tả | Files |
 |---|---------|-------|-------|
 | 3 | [System Design & Architecture](./3.%20System%20Design%20%26%20Architecture/) | Clean/Hexagonal Architecture, Microservices, EDA, CQRS, API Design, Security, Infra, DR, Cost | 19 |
 | 4 | [Domain-Driven Design](./4.%20Domain-Driven%20Design%20(DDD)/) | Strategic DDD (Bounded Contexts, Context Mapping), Tactical DDD (Entities, Value Objects, Aggregates) | 4 |
 
-### Data & Distribution (Du lieu & Phan tan)
+### Dữ liệu & Phân tán
 
-| # | Section | Mo ta | Files |
+| # | Section | Mô tả | Files |
 |---|---------|-------|-------|
 | 5 | [Data Modeling & Database Design](./5.%20Data%20Modeling%20%26%20Database%20Design/) | Relational modeling, Indexing, NoSQL, Data lifecycle, GDPR | 5 |
 | 6 | [Distributed Systems](./6.%20Distributed%20Systems%20fundamentals/) | CAP/PACELC, Consensus (Raft), Vector Clocks, Consistent Hashing, Distributed Locking | 6 |
 
-### Operations (Van hanh)
+### Vận hành
 
-| # | Section | Mo ta | Files |
+| # | Section | Mô tả | Files |
 |---|---------|-------|-------|
 | 7 | [Observability & Operational Thinking](./7.%20Observability%20%26%20Operational%20thinking/) | SRE (SLI/SLO/SLA), Advanced Observability, Alerting, Production Readiness | 5 |
 | 8 | [Security by Design](./8.%20Security%20by%20Design/) | Threat Modeling (STRIDE), OAuth2/OIDC, Authorization (RBAC/ABAC/ReBAC), OWASP Top 10 | 5 |
 
-### Quality & Decisions (Chat luong & Quyet dinh)
+### Chất lượng & Quyết định
 
-| # | Section | Mo ta | Files |
+| # | Section | Mô tả | Files |
 |---|---------|-------|-------|
 | 9 | [Testing Strategy](./9.%20Testing%20Strategy%20(kh%C3%B4ng%20ph%E1%BA%A3i%20vi%E1%BA%BFt%20test)/) | Testing philosophy, Unit/Integration/E2E strategy, Contract testing, Testing architecture | 5 |
 | 10 | [Technical Decision Making](./10.%20Technical%20Decision%20Making/) | Decision frameworks, RFC process, Build vs Buy, Communication & Leadership | 5 |
 
-## Danh cho ai?
+## Dành cho ai?
 
-- **Junior Engineers**: Doc tu Section 1 → 2 → 9 de xay nen tang
-- **Mid-level Engineers**: Focus Section 3 → 4 → 5 de len level
-- **Senior Engineers**: Deep dive Section 6 → 7 → 8 → 10 de master production systems
+- **Junior Engineers**: Đọc từ Section 1 → 2 → 9 để xây nền tảng
+- **Mid-level Engineers**: Focus Section 3 → 4 → 5 để lên level
+- **Senior Engineers**: Deep dive Section 6 → 7 → 8 → 10 để master production systems
 - **Tech Leads / CTOs**: Section 10 + 3 (architecture decisions) + 7 (operational excellence)
 
-## Lo trinh hoc de xuat
+## Lộ trình học đề xuất
 
 ```
-Phase 1: Foundations (2-4 tuan)
-  1. Design Principles → hieu "tai sao" truoc khi hieu "the nao"
-  2. Design Patterns → cong cu tu duy, khong phai recipe
+Phase 1: Nền tảng (2-4 tuần)
+  1. Design Principles → hiểu "tại sao" trước khi hiểu "thế nào"
+  2. Design Patterns → công cụ tư duy, không phải recipe
 
-Phase 2: Architecture (4-6 tuan)
-  3. System Design → buc tranh toan canh
-  4. DDD → khi domain phuc tap
-  5. Data Modeling → nen tang cua moi he thong
+Phase 2: Kiến trúc (4-6 tuần)
+  3. System Design → bức tranh toàn cảnh
+  4. DDD → khi domain phức tạp
+  5. Data Modeling → nền tảng của mọi hệ thống
 
-Phase 3: Production (4-6 tuan)
-  6. Distributed Systems → hieu he thong phan tan
-  7. Observability → van hanh production
-  8. Security → bao ve he thong
+Phase 3: Production (4-6 tuần)
+  6. Distributed Systems → hiểu hệ thống phân tán
+  7. Observability → vận hành production
+  8. Security → bảo vệ hệ thống
 
 Phase 4: Mastery (ongoing)
-  9. Testing Strategy → dam bao chat luong
-  10. Technical Decision Making → ky nang cua senior/lead
+  9. Testing Strategy → đảm bảo chất lượng
+  10. Technical Decision Making → kỹ năng của senior/lead
 ```
 
-## Nguyen tac thiet ke tai lieu nay
+## Nguyên tắc thiết kế tài liệu này
 
-1. **Thuc te truoc ly thuyet** — Moi concept bat dau tu van de thuc te
-2. **TypeScript-first** — Code chay duoc, khong phai pseudocode
-3. **Trade-offs** — Khong co giai phap hoan hao, chi co trade-offs
-4. **Khi nao KHONG dung** — Biet khi nao KHONG ap dung quan trong hon biet ap dung
-5. **Production-grade** — Viet cho he thong thuc, khong phai bai tap
+1. **Thực tế trước lý thuyết** — Mọi concept bắt đầu từ vấn đề thực tế
+2. **TypeScript-first** — Code chạy được, không phải pseudocode
+3. **Trade-offs** — Không có giải pháp hoàn hảo, chỉ có trade-offs
+4. **Khi nào KHÔNG dùng** — Biết khi nào KHÔNG áp dụng quan trọng hơn biết áp dụng
+5. **Production-grade** — Viết cho hệ thống thực, không phải bài tập
 
 ## License
 
